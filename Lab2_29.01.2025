@@ -1,1 +1,63 @@
+// Circle
+import java.util.*;
+public class Circle {
+    int radius;
+    double area;
+    double circumstance;
 
+    void display(int a) {
+        area = 3.1416 * radius * radius;
+        System.out.println("Area is: " + area);
+    }
+
+    void circumstance(int b) {
+        circumstance = 2 * 3.1416 * radius;
+        System.out.println("Circumstance is: " + circumstance);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Circle obj = new Circle();
+        System.out.println("Enter radius: ");
+        obj.radius = sc.nextInt();
+        obj.display(obj.radius);
+        obj.circumstance(obj.radius);
+    }
+
+// Employee
+import java.util.*;
+public class Employee {
+    String name;
+    String jobTitle;
+    int salary;
+
+    void display() {
+        System.out.println("Name :"+name);
+        System.out.println("Job Title  : "+jobTitle);
+        System.out.println("Salary "+salary);
+    }
+
+    void incrementSalary(int a) {
+        System.out.println("Incremented Salary : "+(salary+5000));
+    }
+
+    void calculateYearlySalary(int b) {
+        System.out.println("Next 12 Year Salary : "+salary*12);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Employee obj = new Employee();
+        System.out.println("Enter name: ");
+        obj.name = sc.nextLine();
+        System.out.println("Enter job title: ");
+        obj.jobTitle = sc.nextLine();
+        System.out.println("Enter Salary: ");
+        obj.salary = sc.nextInt();
+
+        obj.display();
+        obj.incrementSalary(obj.salary);
+        obj.calculateYearlySalary(obj.salary);
+
+    }
+}
